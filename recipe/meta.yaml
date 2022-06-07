@@ -1,5 +1,5 @@
 {% set name = "eodag" %}
-{% set version = "2.4.0" %}
+{% set version = "2.5.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/eodag-{{ version }}.tar.gz
-  sha256: 136a5c8397a72b38e838f80b47a176791172708000072d4001e2fb108116bf3d
+  sha256: a144d74c247fa3f67dd88acdd53484045912ade18b310094275cb6cee0912fa2
 
 build:
   number: 0
@@ -33,15 +33,16 @@ requirements:
     - owslib
     - pyproj
     - pyshp
-    - pystac
+    - pystac >=1.0.0b1
     - python >=3.6
     - python-dateutil
     - pyyaml
     - requests
     - shapely
     - tqdm
-    - usgs >=0.3.0
+    - usgs >=0.3.1
     - whoosh
+    - ecmwf-api-client
 
 test:
   imports:
