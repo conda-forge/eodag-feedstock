@@ -42,7 +42,7 @@ requirements:
     - tqdm
     - usgs >=0.3.1
     - whoosh
-    - ecmwf-api-cli
+    - ecmwf-api-client
 
 test:
   imports:
