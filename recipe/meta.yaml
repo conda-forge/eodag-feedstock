@@ -33,7 +33,7 @@ requirements:
     - owslib
     - pyproj
     - pyshp
-    - pystac >= 1.0.0b1
+    - pystac >=1.0.0b1
     - python >=3.6
     - python-dateutil
     - pyyaml
