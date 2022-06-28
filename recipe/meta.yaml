@@ -30,7 +30,8 @@ requirements:
     - jsonpath-ng
     - lxml
     - markdown >=3.0.1
-    - owslib
+    - owslib < 0.26 [py>=310]
+    - owslib [py<310]
     - pyproj
     - pyshp
     - pystac >=1.0.0b1
