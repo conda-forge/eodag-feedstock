@@ -1,5 +1,5 @@
 {% set name = "eodag" %}
-{% set version = "2.6.0" %}
+{% set version = "2.6.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/eodag-{{ version }}.tar.gz
-  sha256: 8dc23bfd1c4b4a0cbe752c96026d8c456acdcd2b66cecfc6b2ab0eb705b9921b
+  sha256: d7133f08a0a79baec3b7be332d09d834e5b40f0af6b9c460efab72bf129c2a3a
 
 build:
   number: 0
@@ -31,7 +31,6 @@ requirements:
     - geojson
     - jsonpath-ng
     - lxml
-    - markdown >=3.0.1
     - owslib <0.26
     - pyproj
     - pyshp
