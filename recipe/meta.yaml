@@ -20,14 +20,14 @@ build:
 requirements:
   host:
     - pip >=19.3
-    - python >=3.6
+    - python >=3.7
     - setuptools >=45
-    - setuptools_scm >=6.2,<7
+    - setuptools_scm >=6.2
   run:
     - boto3
     - click
     - flasgger
-    - flask >=1.0.2
+    - flask >=1.0.2,!=2.2.0,!=2.2.1
     - geojson
     - jsonpath-ng
     - lxml
@@ -45,6 +45,7 @@ requirements:
     - usgs >=0.3.1
     - whoosh
     - ecmwf-api-client
+    - cdsapi
 
 test:
   imports:
