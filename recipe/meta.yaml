@@ -1,5 +1,5 @@
 {% set name = "eodag" %}
-{% set version = "2.9.1" %}
+{% set version = "2.9.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/eodag-{{ version }}.tar.gz
-  sha256: d1ed733c2b6931a61ca6d9883efa1aa7ac151ea550d12833629c3663756d55a8
+  sha256: a9c6a8105bb897751cf8e33ccbb8c1e6a4bf5262b458cd2b48d3c50ce50f23fb
 
 build:
   number: 0
@@ -29,10 +29,11 @@ requirements:
     - flasgger
     - flask >=1.0.2,!=2.2.0,!=2.2.1
     - geojson
+    - orjson
     - jsonpath-ng
     - lxml
     - owslib <0.26
-    - pyproj
+    - pyproj >=2.1.0
     - pyshp
     - pystac >=1.0.0b1
     - python >=3.6
