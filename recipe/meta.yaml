@@ -20,26 +20,28 @@ build:
 requirements:
   host:
     - pip >=19.3
-    - python >=3.7
+    - python >=3.8
     - setuptools >=45
     - setuptools_scm >=6.2
   run:
     - boto3
     - click
-    - flasgger
-    - flask >=1.0.2,!=2.2.0,!=2.2.1
+    - jsonpath-ng <1.6.0
+    - fastapi >=0.93.0
+    - uvicorn
+    - stream-zip
     - geojson
     - orjson
-    - jsonpath-ng
     - lxml
     - owslib <0.26
     - pyproj >=2.1.0
     - pyshp
     - pystac >=1.0.0b1
-    - python >=3.6
+    - python >=3.8
     - python-dateutil
     - pyyaml
     - requests
+    - requests-ftp
     - shapely
     - tqdm
     - usgs >=0.3.1
