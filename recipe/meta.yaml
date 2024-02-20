@@ -25,15 +25,17 @@ requirements:
     - setuptools_scm >=6.2
   run:
     - boto3
+    - botocore
     - click
     - jsonpath-ng <1.6.0
     - fastapi >=0.93.0
+    - starlette
     - uvicorn
     - stream-zip
     - geojson
     - orjson
     - lxml
-    - owslib <0.26
+    - OWSLib >=0.27.1
     - pyproj >=2.1.0
     - pyshp
     - pystac >=1.0.0b1
@@ -42,12 +44,17 @@ requirements:
     - pyyaml
     - requests
     - requests-ftp
+    - urllib3
     - shapely
     - tqdm
     - usgs >=0.3.1
-    - whoosh
+    - Whoosh
     - ecmwf-api-client
     - cdsapi
+    - pydantic >=2.1.0
+    - typing_extensions
+    - annotated-types
+    - setuptools
 
 test:
   imports:
