@@ -23,7 +23,7 @@ outputs:
   - name: eodag
     build:
       noarch: python
-      script: {{ PYTHON }} -m pip install . -vv
+      script: python -m pip install . -vv
     requirements:
       host:
         - pip >=19.3
