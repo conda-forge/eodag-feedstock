@@ -11,7 +11,7 @@ source:
   sha256: 6e42b98420491b8f83cd775587e4a2f77b5ebf726341066d8bdad67758d3e1d5
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - eodag = eodag.cli:eodag
 
