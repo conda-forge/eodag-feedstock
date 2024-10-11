@@ -1,5 +1,5 @@
 {% set name = "eodag" %}
-{% set version = "2.12.1" %}
+{% set version = "3.0.0" %}
 
 
 package:
@@ -8,63 +8,81 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/eodag-{{ version }}.tar.gz
-  sha256: 507a2b3335c6882f90f3b61ab1b71b6c677018520e2c5895b16d43e7130a5916
+  sha256: 6e42b98420491b8f83cd775587e4a2f77b5ebf726341066d8bdad67758d3e1d5
 
 build:
   number: 0
-  noarch: python
   entry_points:
     - eodag = eodag.cli:eodag
-  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - pip >=19.3
     - python >=3.8
-    - setuptools >=45
-    - setuptools_scm >=6.2
-  run:
-    - boto3
-    - botocore
-    - click
-    - jsonpath-ng <1.6.0
-    - fastapi >=0.93.0
-    - starlette
-    - uvicorn
-    - stream-zip
-    - geojson
-    - orjson
-    - lxml
-    - OWSLib >=0.27.1
-    - pyproj >=2.1.0
-    - pyshp
-    - pystac >=1.0.0b1
-    - python >=3.8
-    - python-dateutil
-    - pyyaml
-    - requests
-    - requests-ftp
-    - urllib3
-    - shapely
-    - tqdm
-    - usgs >=0.3.1
-    - Whoosh
-    - ecmwf-api-client
-    - cdsapi
-    - pydantic >=2.1.0
-    - typing_extensions
-    - annotated-types
-    - setuptools
 
-test:
-  imports:
-    - eodag
-    - eodag.api
-  commands:
-    - pip check
-    - eodag --help
-  requires:
-    - pip
+outputs:
+  - name: eodag
+    build:
+      noarch: python
+      script: python -m pip install . -vv
+    requirements:
+      host:
+        - pip >=19.3
+        - python >=3.8
+        - setuptools >=45
+        - setuptools_scm >=6.2
+      run:
+        - annotated-types
+        - boto3
+        - botocore
+        - click
+        - ecmwf-api-client
+        - geojson
+        - jsonpath-ng <1.6.0
+        - lxml
+        - orjson
+        - OWSLib >=0.27.1
+        - pydantic >=2.1.0
+        - pydantic-core
+        - pyproj >=2.1.0
+        - pyshp
+        - pystac >=1.0.0b1
+        - python >=3.8
+        - python-dateutil
+        - PyYAML
+        - requests
+        - setuptools
+        - shapely >=2.0.6
+        - stream-zip
+        - tqdm
+        - typing_extensions >=4.8.0
+        - urllib3
+        - usgs >=0.3.1
+        - Whoosh
+    test:
+      imports:
+        - eodag
+        - eodag.api
+      commands:
+        - pip check
+        - eodag --help
+      requires:
+        - pip
+
+  - name: eodag-server
+    requirements:
+      run:
+        - {{ pin_subpackage('eodag', exact=True) }}
+        - cachetools
+        - fastapi >=0.93.0
+        - pydantic-settings
+        - python >=3.8
+        - pygeofilter
+        - starlette
+        - uvicorn-standard
+    test:
+      imports:
+        # dummy test; actual tests are in subpackages
+        - eodag
 
 about:
   home: https://github.com/CS-SI/eodag
