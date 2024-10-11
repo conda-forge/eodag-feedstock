@@ -24,37 +24,39 @@ requirements:
     - setuptools >=45
     - setuptools_scm >=6.2
   run:
+    - annotated-types
     - boto3
     - botocore
+    - cachetools
     - click
-    - jsonpath-ng <1.6.0
+    - ecmwf-api-client
     - fastapi >=0.93.0
-    - starlette
-    - uvicorn
-    - stream-zip
     - geojson
-    - orjson
+    - jsonpath-ng <1.6.0
     - lxml
+    - orjson
     - OWSLib >=0.27.1
+    - pydantic >=2.1.0
+    - pydantic-core
+    - pydantic-settings
+    - pygeofilter
     - pyproj >=2.1.0
     - pyshp
     - pystac >=1.0.0b1
     - python >=3.8
     - python-dateutil
-    - pyyaml
+    - PyYAML
     - requests
-    - requests-ftp
-    - urllib3
-    - shapely
-    - tqdm
-    - usgs >=0.3.1
-    - Whoosh
-    - ecmwf-api-client
-    - cdsapi
-    - pydantic >=2.1.0
-    - typing_extensions
-    - annotated-types
     - setuptools
+    - shapely >=2.0.6
+    - starlette
+    - stream-zip
+    - tqdm
+    - typing_extensions >=4.8.0
+    - urllib3
+    - usgs >=0.3.1
+    - uvicorn-standard
+    - Whoosh
 
 test:
   imports:
