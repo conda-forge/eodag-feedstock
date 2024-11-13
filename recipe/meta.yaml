@@ -1,5 +1,5 @@
 {% set name = "eodag" %}
-{% set version = "3.0.0" %}
+{% set version = "3.0.1" %}
 
 
 package:
@@ -8,16 +8,16 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/eodag-{{ version }}.tar.gz
-  sha256: 6e42b98420491b8f83cd775587e4a2f77b5ebf726341066d8bdad67758d3e1d5
+  sha256: bd9a2eb386f855948163a9af1e718e1893bc981ebd791aa407f6c82fcd68a73b
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - eodag = eodag.cli:eodag
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
 
 outputs:
   - name: eodag
@@ -27,7 +27,7 @@ outputs:
     requirements:
       host:
         - pip >=19.3
-        - python >=3.8
+        - python >=3.9
         - setuptools >=45
         - setuptools_scm >=6.2
       run:
@@ -43,10 +43,11 @@ outputs:
         - OWSLib >=0.27.1
         - pydantic >=2.1.0
         - pydantic-core
+        - PyJWT >=2.5.0
         - pyproj >=2.1.0
         - pyshp
         - pystac >=1.0.0b1
-        - python >=3.8
+        - python >=3.9
         - python-dateutil
         - PyYAML
         - requests
@@ -75,7 +76,7 @@ outputs:
         - cachetools
         - fastapi >=0.93.0
         - pydantic-settings
-        - python >=3.8
+        - python >=3.9
         - pygeofilter
         - starlette
         - uvicorn-standard
