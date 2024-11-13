@@ -17,7 +17,7 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
 
 outputs:
   - name: eodag
@@ -27,7 +27,7 @@ outputs:
     requirements:
       host:
         - pip >=19.3
-        - python >=3.8
+        - python >=3.9
         - setuptools >=45
         - setuptools_scm >=6.2
       run:
@@ -43,10 +43,11 @@ outputs:
         - OWSLib >=0.27.1
         - pydantic >=2.1.0
         - pydantic-core
+        - PyJWT >=2.5.0
         - pyproj >=2.1.0
         - pyshp
         - pystac >=1.0.0b1
-        - python >=3.8
+        - python >=3.9
         - python-dateutil
         - PyYAML
         - requests
@@ -75,7 +76,7 @@ outputs:
         - cachetools
         - fastapi >=0.93.0
         - pydantic-settings
-        - python >=3.8
+        - python >=3.9
         - pygeofilter
         - starlette
         - uvicorn-standard
