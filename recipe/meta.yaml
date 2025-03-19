@@ -11,7 +11,7 @@ source:
   sha256: bd9a2eb386f855948163a9af1e718e1893bc981ebd791aa407f6c82fcd68a73b
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - eodag = eodag.cli:eodag
 
@@ -27,7 +27,7 @@ outputs:
     requirements:
       host:
         - pip >=19.3
-        - python >=3.9
+        - python {{ python_min }}
         - setuptools >=45
         - setuptools_scm >=6.2
       run:
@@ -47,7 +47,7 @@ outputs:
         - pyproj >=2.1.0
         - pyshp
         - pystac >=1.0.0b1
-        - python >=3.9
+        - python >={{ python_min }}
         - python-dateutil
         - PyYAML
         - requests
