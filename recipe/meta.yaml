@@ -35,7 +35,8 @@ outputs:
         - boto3
         - botocore
         - click
-        - cryptography  # Needed for PyJWT[crypto]
+        # Needed for PyJWT[crypto]
+        - cryptography
         - ecmwf-api-client
         - geojson
         - jsonpath-ng
