@@ -35,9 +35,10 @@ outputs:
         - boto3
         - botocore
         - click
+        - cryptography  # Needed for PyJWT[crypto]
         - ecmwf-api-client
         - geojson
-        - jsonpath-ng <1.6.0
+        - jsonpath-ng
         - lxml
         - orjson
         - OWSLib >=0.27.1
