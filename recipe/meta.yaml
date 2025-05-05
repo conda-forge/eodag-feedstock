@@ -39,6 +39,7 @@ outputs:
         - cryptography
         - ecmwf-api-client
         - geojson
+        - importlib_metadata >=5.0
         - jsonpath-ng
         - lxml
         - orjson
@@ -53,7 +54,6 @@ outputs:
         - python-dateutil
         - PyYAML
         - requests
-        - setuptools
         - shapely >=2.0.6
         - stream-zip
         - tqdm
