@@ -1,5 +1,5 @@
 {% set name = "eodag" %}
-{% set version = "3.3.2" %}
+{% set version = "3.4.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/eodag-{{ version }}.tar.gz
-  sha256: 4da9fe86b2a142f3011af24c135c4806dbd8f1015b87f0e22c6d3630b1640a1e
+  sha256: ea2d6a7d316756ebec07a491262223d4b73cb628d194e9cbfd0d0fbe3328983c
 
 build:
   number: 0
@@ -39,6 +39,7 @@ outputs:
         - cryptography
         - ecmwf-api-client
         - geojson
+        - importlib_metadata >=5.0
         - jsonpath-ng
         - lxml
         - orjson
@@ -53,7 +54,6 @@ outputs:
         - python-dateutil
         - PyYAML
         - requests
-        - setuptools
         - shapely >=2.0.6
         - stream-zip
         - tqdm
