@@ -60,7 +60,6 @@ outputs:
         - typing_extensions >=4.8.0
         - urllib3
         - usgs >=0.3.6
-        - Whoosh
     test:
       imports:
         - eodag
