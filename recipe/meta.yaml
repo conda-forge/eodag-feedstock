@@ -55,11 +55,11 @@ outputs:
         - PyYAML
         - requests
         - shapely >=2.0.6
-        - stream-zip
         - tqdm
         - typing_extensions >=4.8.0
         - urllib3
         - usgs >=0.3.6
+        - zipstream-ng
     test:
       imports:
         - eodag
