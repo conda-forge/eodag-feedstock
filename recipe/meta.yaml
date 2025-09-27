@@ -1,5 +1,5 @@
 {% set name = "eodag" %}
-{% set version = "3.8.0" %}
+{% set version = "3.9.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/eodag-{{ version }}.tar.gz
-  sha256: c49f3b93b2495bf280b8192653c8a4b43c58d22c2b773480f9bda3a7e834b971
+  sha256: 97a7ef2d16f69ffe9bfdd83d12b93f5cf48f1265a8c34b94fcb6ab385f87561a
 
 build:
   number: 0
@@ -55,11 +55,11 @@ outputs:
         - PyYAML
         - requests
         - shapely >=2.0.6
-        - stream-zip
         - tqdm
         - typing_extensions >=4.8.0
         - urllib3
         - usgs >=0.3.6
+        - zipstream-ng
     test:
       imports:
         - eodag
