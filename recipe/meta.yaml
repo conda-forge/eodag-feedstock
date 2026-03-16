@@ -35,8 +35,6 @@ outputs:
         - boto3
         - botocore
         - click
-        # Needed for PyJWT[crypto]
-        - cryptography
         - ecmwf-api-client
         - geojson
         - importlib_metadata >=5.0
@@ -46,7 +44,7 @@ outputs:
         - OWSLib >=0.27.1
         - pydantic >=2.1.0
         - pydantic-core
-        - PyJWT >=2.5.0
+        - PyJWT[crypto] >=2.5.0
         - pyproj >=2.1.0
         - pyshp
         - pystac >=1.0.0b1
