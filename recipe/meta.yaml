@@ -70,22 +70,6 @@ outputs:
       requires:
         - pip
 
-  - name: eodag-server
-    requirements:
-      run:
-        - {{ pin_subpackage('eodag', exact=True) }}
-        - cachetools
-        - fastapi >=0.93.0
-        - pydantic-settings
-        - python >=3.9
-        - pygeofilter
-        - starlette
-        - uvicorn-standard
-    test:
-      imports:
-        # dummy test; actual tests are in subpackages
-        - eodag
-
 about:
   home: https://github.com/CS-SI/eodag
   summary: Earth Observation Data Access Gateway
