@@ -37,7 +37,7 @@ outputs:
         - click
         - ecmwf-api-client
         - geojson
-        - importlib_metadata >=5.0
+        - importlib-metadata >=5.0
         - jsonpath-ng <1.8.0
         - lxml
         - orjson
@@ -68,6 +68,7 @@ outputs:
         - eodag --help
       requires:
         - pip
+        - python {{ python_min }}
 
 about:
   home: https://github.com/CS-SI/eodag
