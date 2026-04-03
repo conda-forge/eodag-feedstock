@@ -11,7 +11,7 @@ source:
   sha256: 3ca614d7f0567ad866a7ba651296225f34b21f167a9dd7819e5d5294e17f8b5c
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - eodag = eodag.cli:eodag
 
@@ -37,7 +37,7 @@ outputs:
         - click
         - ecmwf-api-client
         - geojson
-        - importlib_metadata >=5.0
+        - importlib-metadata >=5.0
         - jsonpath-ng <1.8.0
         - lxml
         - orjson
@@ -53,6 +53,7 @@ outputs:
         - PyYAML
         - requests
         - shapely >=2.0.6
+        - stac-pydantic
         - tqdm
         - typing_extensions >=4.8.0
         - urllib3
@@ -67,6 +68,7 @@ outputs:
         - eodag --help
       requires:
         - pip
+        - python {{ python_min }}
 
 about:
   home: https://github.com/CS-SI/eodag
