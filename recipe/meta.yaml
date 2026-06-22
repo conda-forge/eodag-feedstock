@@ -11,9 +11,9 @@ source:
   sha256: 40b846ce62dfa9a205f73db71272f00be12f788535f05275d076f818abd0441b
 
 build:
-  number: 0
+  number: 1
   entry_points:
-    - eodag = eodag.cli:eodag
+    - eodag = eodag.cli:eodag_cli
 
 requirements:
   host:
