@@ -1,0 +1,39 @@
+name: Test Recipe
+
+on:
+  push:
+    branches: [ main, master ]
+    paths: [ 'recipe/**' ]
+  pull_request:
+    branches: [ main, master ]
+    paths: [ 'recipe/**' ]
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up conda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-update-conda: true
+          conda-build-version: latest
+          channels: conda-forge
+
+      - name: Build and test recipe
+        shell: bash -l {0}
+        run: |
+          conda build recipe/
+
+      - name: Test entry point
+        shell: bash -l {0}
+        run: |
+          # Verify the eodag command works
+          eodag --help
+          
+          # Test list command with --no-fetch
+          eodag list --no-fetch
