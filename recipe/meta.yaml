@@ -1,5 +1,5 @@
 {% set name = "eodag" %}
-{% set version = "4.4.0" %}
+{% set version = "4.5.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/eodag-{{ version }}.tar.gz
-  sha256: 40b846ce62dfa9a205f73db71272f00be12f788535f05275d076f818abd0441b
+  sha256: 80fb5c6c15b64f9bf44fe64498e1643404c0d59d6ab01af6c105e2e238a3d67f
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - eodag = eodag.cli:eodag_cli
 
