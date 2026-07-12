@@ -42,7 +42,7 @@ outputs:
         - lxml
         - orjson
         - OWSLib >=0.27.1
-        - pydantic >=2.12.3
+        - pydantic >=2.13.0
         - pydantic-core
         - PyJWT[crypto] >=2.5.0
         - pyproj >=2.1.0
