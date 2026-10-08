@@ -38,7 +38,7 @@ outputs:
         - ecmwf-api-client
         - geojson
         - importlib-metadata >=5.0
-        - jsonpath-ng <1.8.0
+        - jsonpath-ng !=1.8.0
         - lxml
         - orjson
         - OWSLib >=0.27.1
