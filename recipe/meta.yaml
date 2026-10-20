@@ -1,5 +1,5 @@
 {% set name = "eodag" %}
-{% set version = "4.9.2" %}
+{% set version = "4.10.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/eodag-{{ version }}.tar.gz
-  sha256: 4b0dbbb91c702133978cb74b61d43d73529950f965e445a6f9647cd66ff4febc
+  sha256: 0fde9872e88a59f51455ad8dcdf2d9cc0760f158ddf3407d72a327da0250c272
 
 build:
   number: 0
