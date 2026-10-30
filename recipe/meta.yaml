@@ -1,5 +1,5 @@
 {% set name = "eodag" %}
-{% set version = "4.10.2" %}
+{% set version = "4.10.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/eodag-{{ version }}.tar.gz
-  sha256: 233eb092f31d44969f4297af57f4aab34c875444d7a30d6d21304e653299e51c
+  sha256: f5dd078b59f86d751ff1328f5bedd209ddb619247aa371176f566ac7b1f22664
 
 build:
   number: 0
@@ -31,36 +31,36 @@ outputs:
         - setuptools >=45
         - setuptools_scm >=6.2
       run:
-        - annotated-types
-        - boto3
-        - botocore
+        - annotated-types >=0.6.0
+        - boto3 >=1.16.0
+        - botocore >=1.19.17
         - certifi >=2026.10.19
-        - click
+        - click >=8.1.8
         - ecmwf-api-client
-        - geojson
+        - geojson >=2.5.0
         - importlib-metadata >=5.0
-        - jsonpath-ng !=1.8.0
-        - lxml
-        - orjson
+        - jsonpath-ng !=1.8.0,>=1.6.0
+        - lxml >=4.6.1
+        - orjson >=3.4.0
         - OWSLib >=0.27.1
         - pydantic >=2.13.0
-        - pydantic-core
+        - pydantic-core >=2.46.0
         - pydantic-settings >=2.11.0
         - PyJWT[crypto] >=2.5.0
-        - pyproj >=2.1.0
-        - pyshp
-        - pystac >=1.0.0b1
+        - pyproj >=3.3.1
+        - pyshp >=2.0.0
+        - pystac >=1.9.0
         - python >={{ python_min }}
-        - python-dateutil
-        - PyYAML
-        - requests
+        - python-dateutil >=2.7.0
+        - PyYAML >=5.4
+        - requests >=2.32.3
         - shapely >=2.0.6
-        - stac-pydantic
-        - tqdm
+        - stac-pydantic >=3.5.0
+        - tqdm >=4.56.2
         - typing_extensions >=4.8.0
-        - urllib3
+        - urllib3 >=1.26.0
         - usgs >=0.3.7
-        - zipstream-ng
+        - zipstream-ng >=1.4.0
     test:
       imports:
         - eodag
